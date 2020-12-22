@@ -2,69 +2,68 @@ import React from "react";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import DashboardIcon from "@material-ui/icons/Dashboard";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import PeopleIcon from "@material-ui/icons/People";
-import BarChartIcon from "@material-ui/icons/BarChart";
-import LayersIcon from "@material-ui/icons/Layers";
-import AssignmentIcon from "@material-ui/icons/Assignment";
+import TextFieldsIcon from "@material-ui/icons/TextFields";
+import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCircleOutlined";
+import AttachmentOutlinedIcon from "@material-ui/icons/AttachmentOutlined";
+import RadioButtonCheckedOutlinedIcon from "@material-ui/icons/RadioButtonCheckedOutlined";
+import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
+import LineStyleOutlinedIcon from "@material-ui/icons/LineStyleOutlined";
+import ExitToAppOutlinedIcon from "@material-ui/icons/ExitToAppOutlined";
+import { useStyles } from "./Styles";
 
-export const mainListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
-  </div>
-);
+const ListItems = () => {
+  const classes = useStyles();
+  return (
+    <div>
+      <ListItem button>
+        <ListItemIcon>
+          <TextFieldsIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="Text Field" className={classes.leftBarItems} />
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
+          <ArrowDropDownCircleOutlinedIcon color="secondary" />
+        </ListItemIcon>
+        <ListItemText primary="Dropdown" className={classes.leftBarItems} />
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
+          <AttachmentOutlinedIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="File" className={classes.leftBarItems} />
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
+          <RadioButtonCheckedOutlinedIcon color="secondary" />
+        </ListItemIcon>
+        <ListItemText primary="Options" className={classes.leftBarItems} />
+      </ListItem>
+      <ListItem button>
+        <ListItemIcon>
+          <CheckBoxOutlinedIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="Checkboxes" className={classes.leftBarItems} />
+      </ListItem>
 
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Current month" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
-    </ListItem>
-  </div>
-);
+      <ListItem button>
+        <ListItemIcon>
+          <LineStyleOutlinedIcon color="secondary" />
+        </ListItemIcon>
+        <ListItemText
+          primary="Multiline Text"
+          className={classes.leftBarItems}
+        />
+      </ListItem>
+
+      <ListItem button>
+        <ListItemIcon>
+          <ExitToAppOutlinedIcon color="primary" />
+        </ListItemIcon>
+        <ListItemText primary="Buttons" className={classes.leftBarItems} />
+      </ListItem>
+    </div>
+  );
+};
+
+export default ListItems;

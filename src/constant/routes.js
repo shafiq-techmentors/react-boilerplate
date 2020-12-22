@@ -9,6 +9,11 @@ export default {
     path: "/sign-in",
     component: "SignIn",
   },
+  START_SCREEN: {
+    name: "start",
+    path: "/start",
+    component: "StartScreen",
+  },
 
   USER_LIST: {
     name: "user-list",

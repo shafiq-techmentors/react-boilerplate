@@ -29,7 +29,7 @@ function App() {
           <Route
             key="default-route"
             path="*"
-            render={() => <Redirect to={ROUTES.SIGN_IN.path} />}
+            render={() => <Redirect to={ROUTES.START_SCREEN.path} />}
             exact
           />
         </Switch>
